@@ -6,15 +6,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-    <link rel="stylesheet" href="{{ "/css/app.css" | relative_url }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ "/assets/fonts/montserrat/stylesheet.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/app.css" | relative_url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   </head>
   <body>
-    <div class="container">
-      {{ content }}
-    </div>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ site.baseurl }}{% link index.html %}">
+            <img src="{{ "/assets/img/logo-light.svg" | relative_url }}" class="hidden-xs hidden-sm" />
+            <img src="{{ "/assets/img/logo-dark.svg" | relative_url }}" class="hidden-md hidden-lg" />
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="primary-nav">
+          <div class="navbar-right">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="{{ site.baseurl }}{% link distribution.html %}">Distribution</a>
+              </li>
+              <li>
+                <a href="{{ site.baseurl }}{% link features.html %}">Features</a>
+              </li>
+              <li>
+                <a href="{{ site.baseurl }}{% link pricing.html %}">Pricing</a>
+              </li>
+              <li>
+                <a href="{{ site.baseurl }}{% link contact.html %}">Contact Us</a>
+              </li>
+              <li class="hidden-md hidden-lg">
+                <a href="{{ site.baseurl }}{% link login.html %}">Log In</a>
+              </li>
+              <li class="hidden-md hidden-lg">
+                <a href="{{ site.baseurl }}{% link sign-up.html %}">Sign Up</a>
+              </li>
+            </ul>
+            <a href="{{ site.baseurl }}{% link login.html %}" class="btn btn-info navbar-btn hidden-xs hidden-sm">Log In</a>
+            <a href="{{ site.baseurl }}{% link sign-up.html %}" class="btn btn-primary navbar-btn hidden-xs hidden-sm">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    {{ content }}
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="nav nav-stacked">
+              <li>
+                <a href="{{ site.baseurl }}{% link distribution.html %}">Distribution</a>
+              </li>
+              <li>
+                <a href="{{ site.baseurl }}{% link features.html %}">Features</a>
+              </li>
+              <li>
+                <a href="{{ site.baseurl }}{% link pricing.html %}">Pricing</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="nav nav-stacked">
+              <li>
+                <a href="https://jobs.glidepath.com/employers/">Jobs</a>
+              </li>
+              <li>
+                <a href="{{ site.baseurl }}{% link faqs.html %}">FAQs</a>
+              </li>
+              <li>
+                <a href="{{ site.baseurl }}{% link privacy-policy.html %}">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="{{ site.baseurl }}{% link terms-of-service.html %}">Terms of Service</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="logo">
+              <a href="{{ site.baseurl }}{% link index.html %}"><img src="{{ "/assets/img/logo-white.svg" | relative_url }}" /></a>
+            </div>
+            <p>
+              &copy; 2017 All Rights Reserved
+            </p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/company/6626092">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x"></i>
+                </span>
+              </a>
+              <a href="https://www.facebook.com/glidepathrecruiting/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x"></i>
+                </span>
+              </a>
+              <a href="https://twitter.com/GlidePathATS">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+              </a>
+              <a href="mailto:support@glidepath.com">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/g/jquery@3.2.1,bootstrap@3.3.7"></script>
-    <script src="{{ "/js/app.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/app.js" | relative_url }}"></script>
   </body>
 </html>

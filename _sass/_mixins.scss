@@ -1,0 +1,38 @@
+/* Smothers an element with a background image
+---------------------------------------------- */
+@mixin bg-cover($url:"") {
+  @if $url {
+    background-image: url($url);
+  }
+  background-position: center center;
+  background-size: cover;
+  background-repeat: none;
+}
+
+/* Sass breakpoints for bootstrap
+--------------------------------- */
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: $screen-sm) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (min-width: $screen-sm) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: $screen-md) { @content; }
+  }
+
+  @else if $class == md-down {
+    @media (max-width: $screen-md) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: $screen-lg) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}

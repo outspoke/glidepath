@@ -1,0 +1,221 @@
+---
+---
+/* Import SASS Dependencies
+--------------------------- */
+@import "variables";
+@import "bootstrap";
+@import "mixins";
+
+/* Global Styles
+---------------- */
+body {
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+.light-text {
+  color: white;
+  h1,h2,h3,h4,h5,h6 {
+    color: white;
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+.alt-header {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #425f74;
+  letter-spacing: 1px;
+}
+
+/* Primary Nav Styles
+--------------------- */
+.navbar {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  .btn {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    + .btn {
+      margin-left: .5rem;
+    }
+  }
+}
+
+.navbar-brand {
+  padding: 30px 15px;
+  img {
+    max-height: 100%;
+  }
+}
+
+@include breakpoint(md){
+  .navbar {
+    background: transparent;
+    margin-bottom: -$navbar-height;
+    border-bottom: 0;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: rgba(255,255,255,.9);
+    &:hover {
+      color: rgba(255,255,255,1);
+    }
+  }
+}
+
+@include breakpoint(md-down) {
+  .navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .navbar-nav > li {
+    text-align: center;
+    border-bottom: 1px solid $navbar-default-border;
+  }
+}
+
+/* Footer Styles
+---------------- */
+.footer {
+  background: #003D60;
+  color: white;
+  padding: 6% 0;
+  text-align: center;
+
+  a {
+    color: rgba(255,255,255,.95);
+    &:hover, &:focus {
+      color: rgba(255,255,255,1);
+    }
+  }
+
+  .nav > li > a:hover, .nav > li > a:focus {
+    background: darken(#003D60, 2%);
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    img {
+      max-height: 25px;
+    }
+  }
+
+  .social-links {
+    font-size: smaller;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  @include breakpoint(md) {
+    text-align: left;
+    .logo {
+      margin-top: 0;
+    }
+  }
+}
+
+/* Page Styles
+-------------- */
+.page-header {
+  @include bg-cover;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  text-align: center;
+  color: white;
+  border-bottom: 0;
+}
+
+@include breakpoint(md){
+  .page-header {
+    padding-top: calc(5% + 90px);
+  }
+}
+
+.free-trial {
+  background: #10A1E3;
+  color: white;
+  padding: 2rem 0;
+}
+
+@include breakpoint(md){
+  .free-trial h3 {
+    margin: .5rem 0;
+  }
+}
+
+.padded-section {
+  padding: 6rem 0 7.5rem 0;
+  &.alt-bg {
+    background: #f3faff;
+  }
+  &.decorative-bg {
+    background: url(../img/decorative-bg-1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.boxed-content {
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  margin: 2rem 0 1rem 0;
+  .header {
+    background: $brand-primary;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  .content {
+    padding: 5rem;
+  }
+}
+
+.quote {
+  .text {
+    &:before, &:after {
+      color: $brand-primary;
+      font-size: 4em;
+      line-height: .1em;
+      vertical-align: middle;
+      position: relative;
+      top:.2em;
+    }
+    &:before {
+      content: "“";
+    }
+    &:after {
+      content: "”";
+    }
+  }
+  .title {
+    font-size: smaller;
+  }
+}
+
+@include breakpoint(md){
+  .inline-cta {
+    h2 {
+      margin: .25rem 0;
+    }
+  }
+}
