@@ -32,6 +32,25 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+.btn-log-in {
+  background: #819fb0;
+  color: white;
+  &:hover, &:focus {
+    background: darken(#819fb0, 2%);
+    color: white;
+  }
+}
+
+.panel-info .panel-title {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.panel-title a {
+  text-decoration: none;
+}
+
 .alt-header {
   text-transform: uppercase;
   font-weight: 300;
@@ -144,6 +163,9 @@ h1, h2, h3, h4, h5, h6 {
 @include breakpoint(md){
   .page-header {
     padding-top: calc(5% + 90px);
+  }
+  .page-header p {
+    padding: 0 12%;
   }
 }
 
