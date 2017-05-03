@@ -204,6 +204,9 @@ h1, h2, h3, h4, h5, h6 {
   &.alt-color {
     background: $brand-info;
   }
+  h3 {
+    margin-top: 0;
+  }
 }
 
 @include breakpoint(md){
