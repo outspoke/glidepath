@@ -1,3 +1,115 @@
 ---
 layout: default
 ---
+
+<div class="page-header home-header light-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <img src="{{ "/assets/img/logo-light.svg" | relative_url }}" />
+        <h3>Start your free trial now</h3>
+        <form>
+          <div class="input-group">
+            <input type="email" placeholder="Email*" required class="form-control"/>
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="submit">Start Posting Jobs</button>
+            </span>
+          </div>
+        </form>
+        <h3>Questions? <a href="tel:8882807434">888-280-7434</a></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="padded-section dashed-connection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <h3 class="alt-header">Distribute</h3>
+        <h3>Smarter Distribution of your<br /> Job means more Applicant Flow</h3>
+        <p>
+          Glidepath makes it easy to post your Job to the most relevant sites for your audience. While other sites take a one size fits all approach, we place your Job where the applicants are, regardless of industry.
+        </p>
+        <br />
+        <a class="btn btn-primary" href="https://www.glidepath.com/signup/">Post a Job Now!</a>
+        <br /><br />
+      </div>
+      <div class="col-md-6 text-center">
+        <h3>100+ Job Boards</h3>
+        <a class="btn btn-primary hollow" href="{{ site.baseurl }}{% link distribution.html %}">Learn More</a>
+        <img src="{{ "/assets/img/100-job-boards.webp" | relative_url }}" />
+      </div>
+    </div>
+    <div class="dashed-graphic"></div>
+  </div>
+</div>
+
+<div class="padded-section features-collapse alt-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-push-6 text-center">
+        <h3 class="alt-header">Organize</h3>
+        <h3>All In One Place, Never Misplaced.</h3>
+        <p>
+          Save time by managing all of your candidates in one place. No more sifting through your inbox to find misplaced resumes. Glidepath provides full visibility into the entire applicant pool 24/7, and the ability to search and filter with ease.
+        </p>
+        <br />
+        <a class="btn btn-primary hollow" href="{{ site.baseurl }}{% link features.html %}">See all features</a>
+      </div>
+      <div class="col-md-6 col-md-pull-6 text-center">
+        <br /><br />
+        <img src="{{ "/assets/img/organize.webp" | relative_url }}" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="padded-section">
+  <div class="container">
+    <h2 class="alt-header text-center">Clients</h2>
+    <br />
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <br />
+        <p>
+          <img src="{{ "/assets/img/iconic.png" | relative_url }}" />
+        </p>
+      </div>
+      <div class="col-md-8">
+        <div class="quote">
+          <p class="text">
+            Glidepath is an absolute no brainer! The simple interface requires almost no training to get started and the intuitiveness of the tool made it simple to implement. As we grow our team, Glidepath will be our applicant tracking system of choice.
+          </p>
+          <p class="title">
+            Jason Hutcheson - CEO Iconic Digital Media
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <p class="text-center">
+      <img src="{{ "/assets/img/clients-1.webp" | relative_url }}" />
+      <img src="{{ "/assets/img/clients-2.webp" | relative_url }}" />
+    </p>
+  </div>
+</div>
+
+<div class="padded-section home-cta light-text text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Get Great Support from Great People</h2>
+        <p>
+          Save time by managing all of your candidates in one place. No more sifting through your inbox to find misplaced resumes. Glidepath provides full visibility into the entire applicant pool 24/7, and the ability to search and filter with ease.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%
+  include register-cta.html
+  title="Ready to get Started?"
+  subtitle="Create your FREE account and post your first job in under 5 minutes."
+%}

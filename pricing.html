@@ -10,11 +10,11 @@ permalink: /pricing/
   img="/assets/img/pricing-header.jpg"
 %}
 
-{% include free-trial.html %}
+{% include free-trial.html css_class="alt-color" %}
 
-<div class="padded-section">
+<div class="padded-section primary-bg">
   <div class="container">
-    <h2 class="alt-header text-center">Pricing</h2>
+    <h2 class="alt-header text-center light-text">Pricing</h2>
     <br />
     <div class="row">
       <div class="col-md-3">
@@ -31,7 +31,7 @@ permalink: /pricing/
             </li>
           </ul>
           <div class="panel-body">
-            <a href="{{ site.baseurl }}{% link sign-up.html %}" class="btn btn-primary">Get Started</a>
+            <a href="https://www.glidepath.com/signup/" class="btn btn-primary">Get Started</a>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@ permalink: /pricing/
             </li>
           </ul>
           <div class="panel-body">
-            <a href="{{ site.baseurl }}{% link sign-up.html %}" class="btn btn-primary">Get Started</a>
+            <a href="https://www.glidepath.com/signup/" class="btn btn-primary">Get Started</a>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ permalink: /pricing/
             </li>
           </ul>
           <div class="panel-body">
-            <a href="{{ site.baseurl }}{% link sign-up.html %}" class="btn btn-primary">Get Started</a>
+            <a href="https://www.glidepath.com/signup/" class="btn btn-primary">Get Started</a>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@ permalink: /pricing/
             </li>
           </ul>
           <div class="panel-body">
-            <a href="{{ site.baseurl }}{% link sign-up.html %}" class="btn btn-primary">Get Started</a>
+            <a href="https://www.glidepath.com/signup/" class="btn btn-primary">Get Started</a>
           </div>
         </div>
       </div>
@@ -102,7 +102,7 @@ permalink: /pricing/
             </li>
           </ul>
           <div class="panel-body">
-            <a href="{{ site.baseurl }}{% link sign-up.html %}" class="btn btn-primary">Get Started</a>
+            <a href="https://www.glidepath.com/signup/" class="btn btn-primary">Get Started</a>
           </div>
         </div>
       </div>
@@ -110,54 +110,34 @@ permalink: /pricing/
   </div>
 </div>
 
-<hr />
-
 <div class="padded-section">
   <div class="container">
     <h2 class="text-center">FAQs</h2>
     <br />
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingOne">
-          <h4 class="panel-title">
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Does Glidepath require a long-term agreement or can I pay month to month? Any pricing advantages to a longer term commitment?
-            </a>
-          </h4>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-          <div class="panel-body">
-            Glidepath offers flexible, month-to-month pricing and requires no long-term commitment. As needs change, plans can be adjusted on a monthly basis.
-            Discounts are offered for annual commitments. If you are interested, please contact us at <a href="mailto:support@glidepath.com">support@glidepath.com</a>.
-          </div>
+    <div class="faqs" id="faq">
+      <div class="faq">
+        <a class="question" data-toggle="collapse" href="#faq-1">
+          Does Glidepath require a long-term agreement or can I pay month to month? Any pricing advantages to a longer term commitment?
+        </a>
+        <div class="answer collapse" id="faq-1">
+          Glidepath offers flexible, month-to-month pricing and requires no long-term commitment. As needs change, plans can be adjusted on a monthly basis.
+          Discounts are offered for annual commitments. If you are interested, please contact us at <a href="mailto:support@glidepath.com">support@glidepath.com</a>.
         </div>
       </div>
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingTwo">
-          <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              How long does it take to start seeing activity on my job posting?
-            </a>
-          </h4>
-        </div>
-        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-          <div class="panel-body">
-            New job posts typically take 12-24 hours to reach all boards within the Glidepath network and another day for the relay of job seeker email alerts. A good rule of thumb is to expect to start seeing applicants a day after posting and to expect your best response flow starting about 48 hours after posting.
-          </div>
+      <div class="faq">
+        <a class="question" data-toggle="collapse" href="#faq-2">
+          How long does it take to start seeing activity on my job posting?
+        </a>
+        <div class="answer collapse" id="faq-2">
+          New job posts typically take 12-24 hours to reach all boards within the Glidepath network and another day for the relay of job seeker email alerts. A good rule of thumb is to expect to start seeing applicants a day after posting and to expect your best response flow starting about 48 hours after posting.
         </div>
       </div>
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingThree">
-          <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              How will I know when someone applies?
-            </a>
-          </h4>
-        </div>
-        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-          <div class="panel-body">
-            Glidepath will send you an email notification each time an applicant applies for a posted job. This notification contains a brief applicant summary along with a link to the full applicant profile within Glidepath. If your account has multiple users, you may select who you wish to receive these email notification when you create your job.
-          </div>
+      <div class="faq">
+        <a class="question" data-toggle="collapse" href="#faq-3">
+          How will I know when someone applies?
+        </a>
+        <div class="answer collapse" id="faq-3">
+          Glidepath will send you an email notification each time an applicant applies for a posted job. This notification contains a brief applicant summary along with a link to the full applicant profile within Glidepath. If your account has multiple users, you may select who you wish to receive these email notification when you create your job.
         </div>
       </div>
     </div>

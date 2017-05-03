@@ -21,15 +21,39 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
 }
 
+.alt-header {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #425f74;
+  letter-spacing: 1px;
+}
+
 .light-text {
   color: white;
   h1,h2,h3,h4,h5,h6 {
     color: white;
   }
+  a {
+    color: white;
+    text-decoration: underline;
+  }
 }
 
 .btn {
   text-transform: uppercase;
+}
+
+.btn.hollow {
+  background: transparent;
+  &.btn-primary {
+    border: 2px solid $btn-primary-border;
+    color: $btn-primary-border;
+
+    &:hover, &:focus {
+      color: white;
+      background: $btn-primary-bg;
+    }
+  }
 }
 
 .btn-log-in {
@@ -49,13 +73,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .panel-title a {
   text-decoration: none;
-}
-
-.alt-header {
-  text-transform: uppercase;
-  font-weight: 300;
-  color: #425f74;
-  letter-spacing: 1px;
 }
 
 /* Primary Nav Styles
@@ -156,8 +173,15 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 10%;
   padding-bottom: 10%;
   text-align: center;
-  color: white;
   border-bottom: 0;
+}
+
+.home-header {
+  text-align: left;
+  background-image: url(../img/header-home.webp);
+  img {
+    max-width: 300px;
+  }
 }
 
 @include breakpoint(md){
@@ -167,12 +191,19 @@ h1, h2, h3, h4, h5, h6 {
   .page-header p {
     padding: 0 12%;
   }
+  .no-header {
+    background: $brand-info;
+    height: 90px;
+  }
 }
 
 .free-trial {
   background: #10A1E3;
   color: white;
   padding: 2rem 0;
+  &.alt-color {
+    background: $brand-info;
+  }
 }
 
 @include breakpoint(md){
@@ -185,6 +216,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 6rem 0 7.5rem 0;
   &.alt-bg {
     background: #f3faff;
+  }
+  &.primary-bg {
+    background: $brand-primary;
   }
   &.decorative-bg {
     background: url(../img/decorative-bg-1.png);
@@ -240,4 +274,59 @@ h1, h2, h3, h4, h5, h6 {
       margin: .25rem 0;
     }
   }
+}
+
+/* FAQs
+------- */
+.faq {
+  padding-left: 3em;
+  position: relative;
+  margin-bottom: 2rem;
+  .question {
+    color: black;
+    display: block;
+    text-decoration: none;
+    &:before {
+      content: '\f067';
+      font-family: 'FontAwesome';
+      color: $gray-light;
+      position: absolute;
+      left: 1em;
+    }
+    &[aria-expanded="true"]:before {
+      content: '\f068';
+    }
+  }
+}
+
+/* Features
+----------- */
+.features-collapse .container {
+  margin-bottom: -7.5rem;
+}
+.features-shadow {
+  box-shadow: 0 5px 5px -2px rgba(0,0,0,.08);
+}
+
+/* Home
+------- */
+.dashed-connection {
+  position: relative;
+
+  img {
+    max-width: 90%;
+  }
+  @include breakpoint(md){
+    .dashed-graphic {
+      width: 53%;
+      margin: -12rem auto 0 auto;
+      height: 12rem;
+      border: 3px dashed $brand-primary;
+      border-top: none;
+    }
+  }
+}
+
+.home-cta {
+  @include bg-cover("../img/cta-bg.webp");
 }
