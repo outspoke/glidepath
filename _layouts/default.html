@@ -22,12 +22,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          {% if page.url != "/" %}
-            <a class="navbar-brand" href="{{ site.baseurl }}{% link index.html %}">
-              <img src="{{ "/assets/img/logo-light.svg" | relative_url }}" class="hidden-xs hidden-sm" />
-              <img src="{{ "/assets/img/logo-dark.svg" | relative_url }}" class="hidden-md hidden-lg" />
-            </a>
-          {% endif %}
+          <a class="navbar-brand{% if page.url == "/" %} hidden-md hidden-lg{% endif %}" href="{{ site.baseurl }}{% link index.html %}">
+            <img src="{{ "/assets/img/logo-light.svg" | relative_url }}" class="hidden-xs hidden-sm" />
+            <img src="{{ "/assets/img/logo-dark.svg" | relative_url }}" class="hidden-md hidden-lg" />
+          </a>
         </div>
         <div class="collapse navbar-collapse" id="primary-nav">
           <div class="navbar-right">
@@ -100,19 +98,19 @@
               &copy; 2017 All Rights Reserved
             </p>
             <div class="social-links">
-              <a href="https://www.linkedin.com/company/6626092">
+              <a target="_blank" href="https://www.linkedin.com/company/6626092">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle-thin fa-stack-2x"></i>
                   <i class="fa fa-linkedin fa-stack-1x"></i>
                 </span>
               </a>
-              <a href="https://www.facebook.com/glidepathrecruiting/">
+              <a target="_blank" href="https://www.facebook.com/glidepathrecruiting/">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle-thin fa-stack-2x"></i>
                   <i class="fa fa-facebook fa-stack-1x"></i>
                 </span>
               </a>
-              <a href="https://twitter.com/GlidePathATS">
+              <a target="_blank" href="https://twitter.com/GlidePathATS">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle-thin fa-stack-2x"></i>
                   <i class="fa fa-twitter fa-stack-1x"></i>
