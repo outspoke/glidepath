@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .home-header {
   text-align: left;
-  background-image: url(../img/header-home.webp);
+  background-image: url(../img/header-home.png);
   img {
     max-width: 300px;
   }
@@ -331,5 +331,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home-cta {
-  @include bg-cover("../img/cta-bg.webp");
+  @include bg-cover("../img/cta-bg.png");
 }
